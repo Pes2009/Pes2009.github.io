@@ -1,0 +1,22 @@
+{
+  "name": "pes009",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pes2009/Pes2009.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pes2009/Pes2009.github.io/issues"
+  },
+  "homepage": "https://github.com/Pes2009/Pes2009.github.io#readme",
+  "devDependencies": {
+    "gulp-uglify": "^2.1.2"
+  }
+}
