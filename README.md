@@ -1,7 +1,7 @@
 # Pes2009.github.io
 
 
-Link do projektu: https://mlabuda2.github.io/ti_2017/
+Link do projektu: https://pes2009.github.io/
 
 ```
 Autor: Martin Madej, nr indeksu 243686
