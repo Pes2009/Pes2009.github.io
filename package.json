@@ -17,6 +17,14 @@
   },
   "homepage": "https://github.com/Pes2009/Pes2009.github.io#readme",
   "devDependencies": {
-    "gulp-uglify": "^2.1.2"
+    "gulp-assets": "^0.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-image": "^2.7.5",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-uglify": "^2.1.2",
+    "jshint": "^2.9.4"
   }
 }

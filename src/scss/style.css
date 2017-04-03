@@ -1,0 +1,11 @@
+body {
+  background: gray; }
+
+#mapka {
+      height: 500px;
+      position: absolute;
+      top:300px;
+      bottom:0px;
+      left:0px;
+      right:0px;
+}
