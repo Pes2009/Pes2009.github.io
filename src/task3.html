@@ -28,6 +28,7 @@
                 <input list=nauczyciele name=nauczyciel id="nauczycielid" value="" autofocus autocomplete=on/>
                 <datalist id=nauczyciele>
                     <option value="Borzyszkowski, Tomasz, dr">
+                    <option value="Borzyszkowski, Andrzej, dr">
                     <option value="Bzyl, Włodzimierz, dr">
                 </datalist>
                 <button id="clear" type="reset">Wyczyść</button>
@@ -39,7 +40,6 @@
 
 <div class="tabela">
     <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
-        <caption>Plan zajęć - Andrzej Borzyszkowski semestr letni 2017</caption>
         <colgroup>
             <col span="1" style="background-color:#37ffc3">
             <col span="6" style="background-color:#50ff69">
@@ -78,10 +78,10 @@
                 document.getElementById('nauczycielid').addEventListener('change', function () {
                     fieldValue = document.getElementById('nauczycielid').value;
                     if (fieldValue == "Bzyl, Włodzimierz, dr") {
-                        zmiennaplan = "jsons/WBzyl.json"
+                        zmiennaplan = "jsons/WBzyl.json";
                     } else if (fieldValue == "Borzyszkowski, Andrzej, dr") {
                         zmiennaplan = "jsons/ABorzyszkowski.json";
-                    } else if (fieldValue == "Borzyszkowski, Tomasz, dr") {
+                    } else  if (fieldValue == "Borzyszkowski, Tomasz, dr") {
                         zmiennaplan = "jsons/TBorzyszkowski.json";
                     }
                     $.getJSON(zmiennaplan, wypelnij);
