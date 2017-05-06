@@ -23,3 +23,10 @@ Autor: Martin Madej, nr indeksu 243686
 + [x] [Simply edit GeoJSON map data](http://geojson.io).
 + [x] [Leaflet JavaScript Library](http://leafletjs.com/).
 + [x] Pull request to [projects.md](https://github.com/h5c3j/ti/blob/master/projects.md).
+
+
+3.1\. [deadline 22.03.2017] [Responsive Tables](https://pes2009.github.io/src/task3.html)
++ [x] Przygotować stronę z kilkoma tabelkami. Następnie dodać responsywność do tabelek.
+
+3.2\. [deadline 22.03.2017] [Responsive Images](https://pes2009.github.io/src/task4.html)
++ [x] Przygotować stronę z kilkoma obrazkami następnie dodać responsywność do obrazków.
