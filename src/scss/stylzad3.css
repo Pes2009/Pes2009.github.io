@@ -1,0 +1,69 @@
+font-face{
+    font-family: 'MFont';
+    src: url('./Dosis/Dosis-Regular.ttf');
+
+}
+
+html, body {
+    font-family: MFont;
+    margin: 0;
+    padding: 0;
+}
+
+.Obrazek {
+    position: relative;
+    text-align: center;
+}
+
+
+.Obrazek2 {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.guziki {
+    font-size: 25px;
+    width: 75%;
+    height: 75%;
+    background-color: white;
+}
+
+.naglowek {
+    display: block;
+    -webkit-margin-before: 5em;
+    -webkit-margin-after: 5em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.galeria-naglowek{
+    -webkit-margin-before: 2em;
+    -webkit-margin-after: 2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-size: 40px;
+}
+
+.Stopka{
+    position: absolute;
+    right: 40px;
+    text-align: right;
+}
+
+.stopka-row{
+    height: 34px;
+    border: 1px solid black;
+}
+
+.tabela {
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 40px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}

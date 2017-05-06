@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width">
+    <meta charset="UTF-8">
+    <!-- ścieszki do cssow -->
+    <link rel="stylesheet" href="SCSS/tablesaw.css">
+    <link rel="stylesheet" href="./scss/stylzad3.css"/>
+    <!-- pliki js -->
+    <script src="js/tablesaw.js"></script>
+    <script src="js/tablesaw-init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- ścieszki do jsonow -->
+    <script src="jsons/ABorzyszkowski.json" type="text/javascript"></script>
+    <script src="jsons/TBorzyszkowski.json" type="text/javascript"></script>
+    <script src="jsons/WBzyl.json" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+<div class='wrapper'>
+    <section>
+        <div id='list'>
+            <div id='prompt'>Podaj nazwisko nauczyciela</div>
+            <form id='formid' action="">
+                <input list=nauczyciele name=nauczyciel id="nauczycielid" value="" autofocus autocomplete=on/>
+                <datalist id=nauczyciele>
+                    <option value="Borzyszkowski, Tomasz, dr">
+                    <option value="Bzyl, Włodzimierz, dr">
+                </datalist>
+                <button id="clear" type="reset">Wyczyść</button>
+                <button id="usunpokaz" type="button">Pokaż</button>
+            </form>
+        </div>
+    </section>
+</div> <!-- class wrapper -->
+
+<div class="tabela">
+    <table class="tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+        <caption>Plan zajęć - Andrzej Borzyszkowski semestr letni 2017</caption>
+        <colgroup>
+            <col span="1" style="background-color:#37ffc3">
+            <col span="6" style="background-color:#50ff69">
+        </colgroup>
+        <thead style="background-color:#7166ff ">
+        <tr>
+            <th>
+                dzień tygodnia
+            </th>
+            <th>
+                godzina
+            </th>
+            <th>
+                przedmiot
+            </th>
+            <th>
+                grupa
+            </th>
+            <th>
+                sala
+            </th>
+            <th>
+                rodzaj zajęć
+            </th>
+            <th>
+                uwagi
+            </th>
+        </tr>
+        </thead>
+        <tbody id='tabela'>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var fieldValue;
+                var zmiennaplan;
+                document.getElementById('nauczycielid').addEventListener('change', function () {
+                    fieldValue = document.getElementById('nauczycielid').value;
+                    if (fieldValue == "Bzyl, Włodzimierz, dr") {
+                        zmiennaplan = "jsons/WBzyl.json"
+                    } else if (fieldValue == "Borzyszkowski, Andrzej, dr") {
+                        zmiennaplan = "jsons/ABorzyszkowski.json";
+                    } else if (fieldValue == "Borzyszkowski, Tomasz, dr") {
+                        zmiennaplan = "jsons/TBorzyszkowski.json";
+                    }
+                    $.getJSON(zmiennaplan, wypelnij);
+                    function wypelnij(data) {
+                        console.log("success");
+                        let add = '';
+                        $.each(data, function (i, obj) {
+                            add += '<tr><td><span class="tablesaw-cell-content">' + obj.dzien + '</span></td>'
+                            add += '<td><span class="tablesaw-cell-content">' + obj.godz + '</span></td>'
+                            add += '<td><span class="tablesaw-cell-content">' + obj.przedmiot + '</span></td>'
+                            add += '<td><span class="tablesaw-cell-content">' + obj.grupa + '</span></td>'
+                            add += '<td><span class="tablesaw-cell-content">' + obj.sala + '</span></td>'
+                            add += '<td><span class="tablesaw-cell-content">' + obj.typ + '</span></td>'
+                            add += '<td><span class="tablesaw-cell-content">' + obj.uwagi + '</span></td></tr>'
+                            console.log("success");
+                        });
+                        $('#tabela').html(add);
+                    }
+                });
+            });
+        </script>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
